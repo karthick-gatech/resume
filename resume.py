@@ -33,7 +33,7 @@ import time
 import re
 # import bz2
 import gzip
-import cPickle as pickle
+import pickle
 import ctypes
 import types
 import numpy as np
@@ -81,9 +81,8 @@ class Checkpoint(dict):
 
     ALLOWED_TYPES = (
         # basic types
-        types.BooleanType, types.ComplexType, types.DictionaryType,
-        types.FloatType, types.IntType, types.ListType, types.LongType,
-        types.NoneType, types.StringType, types.TupleType, types.UnicodeType,
+        bool, complex, dict,
+        float, int, list, tuple, str, None,
 
         # numpy
         np.ndarray, np.generic,
